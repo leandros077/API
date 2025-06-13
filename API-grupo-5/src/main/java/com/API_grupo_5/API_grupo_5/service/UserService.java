@@ -37,7 +37,7 @@ public class UserService {
     // Atualizar um produto
     public User atualizar(Long id, User user) {
         if (UserRepository.existsById(id)){
-            user.setId(id);
+            user.setClienteID(id);
             return UserRepository.save(user);
         }
         return null;

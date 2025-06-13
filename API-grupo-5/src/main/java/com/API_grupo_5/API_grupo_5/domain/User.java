@@ -14,20 +14,28 @@ import lombok.Data;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private Long ClienteID ;
 
-    private String nome;
+    private String Nome;
     @Column
 
+    private String CPF;
+    @Column
+
+    
     private String Email;
-    @Column
-
-    private String Senha;
     @Column
 
     private String Telefone;
     @Column
 
-    private int categoria_id ;
+    private String Endereco;
+    @Column
+
+    private String Senha;
+    @Column
+
+    
+    private String DataCadastro;
     
 }
