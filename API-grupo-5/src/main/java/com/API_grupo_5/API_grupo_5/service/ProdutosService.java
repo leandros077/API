@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.API_grupo_5.API_grupo_5.domain.Produto;
-import com.API_grupo_5.API_grupo_5.repository.ProtudoRepository;
+import com.API_grupo_5.API_grupo_5.repository.ProdutoRepository;
 
 @Service
 public class ProdutosService {
      @Autowired
-    private ProtudoRepository produtoRepository;
+    private ProdutoRepository produtoRepository;
 
     // Obter todos os produtos
     public List<Produto> listarProdutos() {
@@ -40,4 +40,13 @@ public class ProdutosService {
         return null;
     }
 
-}
+    // Excluir um Produto
+    public boolean deletar(Long id){
+        if (produtoRepository.existsById(id)) {
+            produtoRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+} 

@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.API_grupo_5.API_grupo_5.domain.Produto;
 
-public interface ProtudoRepository  extends CrudRepository<Produto,Long>  {
+public interface ProdutoRepository  extends CrudRepository<Produto,Long>  {
     
 }

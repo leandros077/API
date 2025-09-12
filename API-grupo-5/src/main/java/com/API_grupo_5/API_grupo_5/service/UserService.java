@@ -43,6 +43,16 @@ public class UserService {
         return null;
     }
 
+    // Excluir  um usuario
+    public boolean deletar(Long id){
+        if (UserRepository.existsById(id)) {
+            UserRepository.deleteById(id);
+            return true;
+            
+        }
+        return false;
+    }
+
 }
 
 
